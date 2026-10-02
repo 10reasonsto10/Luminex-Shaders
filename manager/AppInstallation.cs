@@ -63,7 +63,7 @@ internal static class AppInstallation
         key.SetValue("CreateStartMenuShortcut", createStartMenuShortcut ? 1 : 0, RegistryValueKind.DWord);
         key.SetValue("CreateDesktopShortcut", createDesktopShortcut ? 1 : 0, RegistryValueKind.DWord);
         key.SetValue("DisplayName", "Luminex Shaders");
-        key.SetValue("DisplayVersion", typeof(AppInstallation).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion.Split('+')[0] ?? "0.1.0-alpha.4");
+        key.SetValue("DisplayVersion", typeof(AppInstallation).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion.Split('+')[0] ?? "0.1.0-alpha");
         key.SetValue("Publisher", "Luminex Shaders");
         key.SetValue("InstallLocation", appRoot);
         key.SetValue("DisplayIcon", executable);

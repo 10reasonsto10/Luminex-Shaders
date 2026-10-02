@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
     <AssemblyName>LuminexManager</AssemblyName>
     <RootNamespace>LuminexManager</RootNamespace>
-    <Version>0.1.0-alpha.4</Version>
+    <Version>0.1.0-alpha</Version>
     <Authors>Luminex Shaders</Authors>
     <Product>Luminex Shaders Manager</Product>
     <ApplicationIcon>Assets\Luminex.ico</ApplicationIcon>
