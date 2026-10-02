@@ -1,0 +1,465 @@
+{
+  "schemaVersion": 1,
+  "source": "https://raw.githubusercontent.com/crosire/reshade-shaders/list/EffectPackages.ini",
+  "packages": [
+    {
+      "id": "00",
+      "name": "Standard effects",
+      "description": "A small set of utility effects (DisplayDepth, UIMask, ...)",
+      "downloadUrl": "https://github.com/crosire/reshade-shaders/archive/slim.zip",
+      "repositoryUrl": "https://github.com/crosire/reshade-shaders/tree/slim",
+      "shaderPath": "",
+      "texturePath": "",
+      "excludedEffects": []
+    },
+    {
+      "id": "01",
+      "name": "SweetFX by CeeJay.dk",
+      "description": "The original SweetFX shader collection (LumaSharpen, SMAA, ...)",
+      "downloadUrl": "https://github.com/CeeJayDK/SweetFX/archive/master.zip",
+      "repositoryUrl": "https://github.com/CeeJayDK/SweetFX",
+      "shaderPath": "",
+      "texturePath": "",
+      "excludedEffects": [
+        "Template.fx"
+      ]
+    },
+    {
+      "id": "02",
+      "name": "Legacy effects",
+      "description": "Effects known from previous ReShade versions (AmbientLight, ...)",
+      "downloadUrl": "https://github.com/crosire/reshade-shaders/archive/legacy.zip",
+      "repositoryUrl": "https://github.com/crosire/reshade-shaders/tree/legacy",
+      "shaderPath": "",
+      "texturePath": "",
+      "excludedEffects": []
+    },
+    {
+      "id": "03",
+      "name": "OtisFX by Otis_Inf",
+      "description": "A set of effects for virtual photographers (Cinematic DOF, ...)",
+      "downloadUrl": "https://github.com/FransBouma/OtisFX/archive/master.zip",
+      "repositoryUrl": "https://github.com/FransBouma/OtisFX",
+      "shaderPath": "OtisFX",
+      "texturePath": "OtisFX",
+      "excludedEffects": []
+    },
+    {
+      "id": "04",
+      "name": "Depth3D by BlueSkyDefender",
+      "description": "Depth-based stereoscopic effect for enhanced depth perception and immersion across 2D displays, 3D hardware, and VR.",
+      "downloadUrl": "https://github.com/BlueSkyDefender/Depth3D/archive/master.zip",
+      "repositoryUrl": "https://github.com/BlueSkyDefender/Depth3D",
+      "shaderPath": "Depth3D",
+      "texturePath": "Depth3D",
+      "excludedEffects": []
+    },
+    {
+      "id": "05",
+      "name": "FXShaders by luluco250",
+      "description": "Various bloom effects, Flashlight, ...",
+      "downloadUrl": "https://github.com/luluco250/FXShaders/archive/master.zip",
+      "repositoryUrl": "https://github.com/luluco250/FXShaders",
+      "shaderPath": "FXShaders",
+      "texturePath": "FXShaders",
+      "excludedEffects": [
+        "GrainSpread.fx"
+      ]
+    },
+    {
+      "id": "06",
+      "name": "reshade-shaders by Daodan",
+      "description": "Comic, ColorIsolation, Composition, ...",
+      "downloadUrl": "https://github.com/Daodan317081/reshade-shaders/archive/master.zip",
+      "repositoryUrl": "https://github.com/Daodan317081/reshade-shaders",
+      "shaderPath": "Daodan",
+      "texturePath": "Daodan",
+      "excludedEffects": [
+        "HotsamplingHelper.fx",
+        "AdaptiveTint.fx",
+        "ColorIsolation2.fx",
+        "Composition.fx",
+        "Stats.fx",
+        "Template.fx"
+      ]
+    },
+    {
+      "id": "07",
+      "name": "Shaders by brussell",
+      "description": "EyeAdaption, UIDetect, ...",
+      "downloadUrl": "https://github.com/brussell1/Shaders/archive/master.zip",
+      "repositoryUrl": "https://github.com/brussell1/Shaders",
+      "shaderPath": "brussell",
+      "texturePath": "brussell",
+      "excludedEffects": []
+    },
+    {
+      "id": "08",
+      "name": "fubax-shaders by Fubaxiusz",
+      "description": "PerfectPerspective, Chromakey, FilmicAnamorphicSharpen, ...",
+      "downloadUrl": "https://github.com/Fubaxiusz/fubax-shaders/archive/master.zip",
+      "repositoryUrl": "https://github.com/Fubaxiusz/fubax-shaders",
+      "shaderPath": "Fubax",
+      "texturePath": "Fubax",
+      "excludedEffects": []
+    },
+    {
+      "id": "09",
+      "name": "qUINT by Marty McFly",
+      "description": "The qUINT shader framework (MXAO, Lightroom, ...)",
+      "downloadUrl": "https://github.com/martymcmodding/qUINT/archive/master.zip",
+      "repositoryUrl": "https://github.com/martymcmodding/qUINT",
+      "shaderPath": "qUINT",
+      "texturePath": "",
+      "excludedEffects": []
+    },
+    {
+      "id": "10",
+      "name": "dh-reshade-shaders by AlucardDH",
+      "description": "Anime, Undither, Uniformity correction, ...",
+      "downloadUrl": "https://github.com/AlucardDH/dh-reshade-shaders/archive/refs/heads/master.zip",
+      "repositoryUrl": "https://github.com/AlucardDH/dh-reshade-shaders",
+      "shaderPath": "DH",
+      "texturePath": "DH",
+      "excludedEffects": []
+    },
+    {
+      "id": "11",
+      "name": "Warp-FX by Radegast",
+      "description": "Fun effects like Swirl, TinyPlanet, ZigZag, ...",
+      "downloadUrl": "https://github.com/Radegast-FFXIV/Warp-FX/archive/master.zip",
+      "repositoryUrl": "https://github.com/Radegast-FFXIV/Warp-FX",
+      "shaderPath": "Warp-FX",
+      "texturePath": "",
+      "excludedEffects": []
+    },
+    {
+      "id": "12",
+      "name": "Color effects by prod80",
+      "description": "An extensive collection of color and contrast manipulation effects",
+      "downloadUrl": "https://github.com/prod80/prod80-ReShade-Repository/archive/master.zip",
+      "repositoryUrl": "https://github.com/prod80/prod80-ReShade-Repository",
+      "shaderPath": "PD80",
+      "texturePath": "PD80",
+      "excludedEffects": []
+    },
+    {
+      "id": "13",
+      "name": "CorgiFX by originalnicodr",
+      "description": "CanvasFog, CanvasMask, StageDepthPlus, ...",
+      "downloadUrl": "https://github.com/originalnicodr/CorgiFX/archive/master.zip",
+      "repositoryUrl": "https://github.com/originalnicodr/CorgiFX",
+      "shaderPath": "CorgiFX",
+      "texturePath": "CorgiFX",
+      "excludedEffects": [
+        "StageDepthPlus_WithDepthBufferMod.fx"
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Insane-Shaders by Lord of Lunacy",
+      "description": "A collection of adaptive image enhancements and filters (CMAA, Oilify, ReVeil, ...)",
+      "downloadUrl": "https://github.com/LordOfLunacy/Insane-Shaders/archive/master.zip",
+      "repositoryUrl": "https://github.com/LordOfLunacy/Insane-Shaders",
+      "shaderPath": "Insane-Shaders",
+      "texturePath": "Insane-Shaders",
+      "excludedEffects": []
+    },
+    {
+      "id": "15",
+      "name": "CobraFX by SirCobra",
+      "description": "Shaders designed for in-game photography",
+      "downloadUrl": "https://github.com/LordKobra/CobraFX/archive/refs/heads/master.zip",
+      "repositoryUrl": "https://github.com/LordKobra/CobraFX",
+      "shaderPath": "CobraFX",
+      "texturePath": "CobraFX",
+      "excludedEffects": [
+        "LongExposure.fx"
+      ]
+    },
+    {
+      "id": "16",
+      "name": "AstrayFX by BlueSkyDefender",
+      "description": "Effects that strayed away from the Depth3D repository",
+      "downloadUrl": "https://github.com/BlueSkyDefender/AstrayFX/archive/master.zip",
+      "repositoryUrl": "https://github.com/BlueSkyDefender/AstrayFX",
+      "shaderPath": "AstrayFX",
+      "texturePath": "AstrayFX",
+      "excludedEffects": [
+        "Limbo_Mod.fx",
+        "SnowScape.fx"
+      ]
+    },
+    {
+      "id": "17",
+      "name": "CRT-Royale-ReShade by akgunter",
+      "description": "A port of CRT-Royale from Libretro to ReShade",
+      "downloadUrl": "https://github.com/akgunter/crt-royale-reshade/archive/refs/heads/master.zip",
+      "repositoryUrl": "https://github.com/akgunter/crt-royale-reshade",
+      "shaderPath": "CRT-Royale",
+      "texturePath": "",
+      "excludedEffects": []
+    },
+    {
+      "id": "18",
+      "name": "RSRetroArch by Matsilagi",
+      "description": "(Curated) repository of RetroArch and retro-related effects",
+      "downloadUrl": "https://github.com/Matsilagi/RSRetroArch/archive/main.zip",
+      "repositoryUrl": "https://github.com/Matsilagi/RSRetroArch",
+      "shaderPath": "RSRetroArch",
+      "texturePath": "RSRetroArch",
+      "excludedEffects": [
+        "ArtifactColors.fx",
+        "lcd-grid.fx",
+        "MAMEPostProc.fx",
+        "NTSCCustom.fx",
+        "NTSC_XOT.fx",
+        "R57_PAL_NEW.fx",
+        "sgenpt-mix.fx",
+        "Technicolor.fx"
+      ]
+    },
+    {
+      "id": "19",
+      "name": "VRToolkit by retroluxfilm",
+      "description": "Modular shader to enhance you HMD clarity & sharpness with minimal performance impact",
+      "downloadUrl": "https://github.com/retroluxfilm/reshade-vrtoolkit/archive/refs/heads/main.zip",
+      "repositoryUrl": "https://github.com/retroluxfilm/reshade-vrtoolkit",
+      "shaderPath": "VRToolkit",
+      "texturePath": "VRToolkit",
+      "excludedEffects": []
+    },
+    {
+      "id": "20",
+      "name": "FGFX by AlexTuduran",
+      "description": "Large Scale Perceptual Obscurance and Irradiance, ...",
+      "downloadUrl": "https://github.com/AlexTuduran/FGFX/archive/refs/heads/main.zip",
+      "repositoryUrl": "https://github.com/AlexTuduran/FGFX",
+      "shaderPath": "FGFX",
+      "texturePath": "",
+      "excludedEffects": []
+    },
+    {
+      "id": "21",
+      "name": "CShade by papadanku",
+      "description": "Image and video processing shaders (convolutions, optical flow, ...)",
+      "downloadUrl": "https://github.com/papadanku/CShade/archive/refs/heads/main.zip",
+      "repositoryUrl": "https://github.com/papadanku/CShade",
+      "shaderPath": "CShade",
+      "texturePath": "",
+      "excludedEffects": []
+    },
+    {
+      "id": "22",
+      "name": "ReShade_HDR_shaders by Lilium",
+      "description": "Democratisation of HDR analysis and other HDR things",
+      "downloadUrl": "https://github.com/EndlesslyFlowering/ReShade_HDR_shaders/archive/refs/heads/master.zip",
+      "repositoryUrl": "https://github.com/EndlesslyFlowering/ReShade_HDR_shaders",
+      "shaderPath": "ReShade_HDR_shaders",
+      "texturePath": "ReShade_HDR_shaders",
+      "excludedEffects": []
+    },
+    {
+      "id": "23",
+      "name": "iMMERSE by Marty McFly",
+      "description": "Marty's Mods Epic ReShade Effects (successor to qUINT)",
+      "downloadUrl": "https://github.com/martymcmodding/iMMERSE/archive/main.zip",
+      "repositoryUrl": "https://github.com/martymcmodding/iMMERSE",
+      "shaderPath": "iMMERSE",
+      "texturePath": "iMMERSE",
+      "excludedEffects": []
+    },
+    {
+      "id": "24",
+      "name": "vort_Shaders by vortigern11",
+      "description": "Shaders made by Vortigern",
+      "downloadUrl": "https://github.com/vortigern11/vort_Shaders/archive/refs/heads/main.zip",
+      "repositoryUrl": "https://github.com/vortigern11/vort_Shaders",
+      "shaderPath": "vort_Shaders",
+      "texturePath": "vort_Shaders",
+      "excludedEffects": []
+    },
+    {
+      "id": "25",
+      "name": "BX-Shade by BarricadeMKXX",
+      "description": "Some ReShade shaders made by BarricadeMKXX",
+      "downloadUrl": "https://github.com/liuxd17thu/BX-Shade/archive/refs/heads/main.zip",
+      "repositoryUrl": "https://github.com/liuxd17thu/BX-Shade",
+      "shaderPath": "BX-Shade",
+      "texturePath": "BX-Shade",
+      "excludedEffects": [
+        "BX_XIV_ChromakeyPlus.fx"
+      ]
+    },
+    {
+      "id": "26",
+      "name": "SHADERDECK by TreyM",
+      "description": "Film emulation and various other effects",
+      "downloadUrl": "https://github.com/IAmTreyM/SHADERDECK/archive/refs/heads/main.zip",
+      "repositoryUrl": "https://github.com/IAmTreyM/SHADERDECK",
+      "shaderPath": "SHADERDECK",
+      "texturePath": "SHADERDECK",
+      "excludedEffects": []
+    },
+    {
+      "id": "27",
+      "name": "METEOR by Marty McFly",
+      "description": "Marty's Extra Effects for ReShade",
+      "downloadUrl": "https://github.com/martymcmodding/METEOR/archive/refs/heads/main.zip",
+      "repositoryUrl": "https://github.com/martymcmodding/METEOR",
+      "shaderPath": "METEOR",
+      "texturePath": "METEOR",
+      "excludedEffects": []
+    },
+    {
+      "id": "28",
+      "name": "Ann-ReShade by Anastasia Bouwsma",
+      "description": "Shaders made for interesting visual effects by Anastasia (requires CShade effects)",
+      "downloadUrl": "https://github.com/AnastasiaGals/Ann-ReShade/archive/master.zip",
+      "repositoryUrl": "https://github.com/AnastasiaGals/Ann-ReShade",
+      "shaderPath": "Ann-ReShade",
+      "texturePath": "Ann-ReShade",
+      "excludedEffects": []
+    },
+    {
+      "id": "29",
+      "name": "AdvancedAutoHDR by Pumbo",
+      "description": "Heavily customizable AutoHDR and HDR tonemapping helpers (to be used in games outputting in HDR)",
+      "downloadUrl": "https://github.com/Filoppi/PumboAutoHDR/archive/refs/heads/master.zip",
+      "repositoryUrl": "https://github.com/Filoppi/PumboAutoHDR",
+      "shaderPath": "",
+      "texturePath": "",
+      "excludedEffects": []
+    },
+    {
+      "id": "30",
+      "name": "ZenteonFX Shaders by Zenteon",
+      "description": "ZenteonFX is the much higher quality successor to QuarkFX and ZN_FX.",
+      "downloadUrl": "https://github.com/Zenteon/ZenteonFX/archive/refs/heads/master.zip",
+      "repositoryUrl": "https://github.com/Zenteon/ZenteonFX",
+      "shaderPath": "ZenteonFX",
+      "texturePath": "ZenteonFX",
+      "excludedEffects": []
+    },
+    {
+      "id": "31",
+      "name": "GShade-Shaders by Marot",
+      "description": "A hodgepodge collection of original and legacy shaders maintained on behalf of the GShade project.",
+      "downloadUrl": "https://github.com/Mortalitas/GShade-Shaders/archive/refs/heads/master.zip",
+      "repositoryUrl": "https://github.com/Mortalitas/GShade-Shaders",
+      "shaderPath": "GShade-Shaders",
+      "texturePath": "GShade-Shaders",
+      "excludedEffects": []
+    },
+    {
+      "id": "32",
+      "name": "Ptho-FX by PthoEastCoast",
+      "description": "Downsample shader, emulates downsampling to a lower resolution for greater image quality and anti-aliasing.",
+      "downloadUrl": "https://github.com/PthoEastCoast/Ptho-FX/archive/refs/heads/main.zip",
+      "repositoryUrl": "https://github.com/PthoEastCoast/Ptho-FX",
+      "shaderPath": "Ptho-FX",
+      "texturePath": "Ptho-FX",
+      "excludedEffects": []
+    },
+    {
+      "id": "33",
+      "name": "potatoFX by PotatoFury",
+      "description": "A collection of HDR compatible reshade shaders.",
+      "downloadUrl": "https://github.com/GimleLarpes/potatoFX/archive/refs/heads/master.zip",
+      "repositoryUrl": "https://github.com/GimleLarpes/potatoFX",
+      "shaderPath": "potatoFX",
+      "texturePath": "potatoFX",
+      "excludedEffects": []
+    },
+    {
+      "id": "34",
+      "name": "The Anagrama Collection by nullfractal",
+      "description": "Programs for ReShade with a focus on cinematic style.",
+      "downloadUrl": "https://github.com/nullfrctl/reshade-shaders/archive/refs/heads/main.zip",
+      "repositoryUrl": "https://github.com/nullfrctl/reshade-shaders",
+      "shaderPath": "Anagrama",
+      "texturePath": "Anagrama",
+      "excludedEffects": []
+    },
+    {
+      "id": "35",
+      "name": "Reshade Simple HDR Shaders by MaxG3D",
+      "description": "Reshade HDR-Compatible shaders that focus on eye-candy effects and basic adjustments",
+      "downloadUrl": "https://github.com/MaxG2D/ReshadeSimpleHDRShaders/archive/refs/heads/main.zip",
+      "repositoryUrl": "https://github.com/MaxG2D/ReshadeSimpleHDRShaders",
+      "shaderPath": "MaxG3D",
+      "texturePath": "MaxG3D",
+      "excludedEffects": []
+    },
+    {
+      "id": "36",
+      "name": "reshade-shaders by Barbatos",
+      "description": "ReShade shaders for visual enhancements, including anti-aliasing, ambient occlusion, global illumination, bloom, color grading, and other post-processing effects.",
+      "downloadUrl": "https://github.com/BarbatosBachiko/Reshade-Shaders/archive/refs/heads/main.zip",
+      "repositoryUrl": "https://github.com/BarbatosBachiko/Reshade-Shaders",
+      "shaderPath": "Barbatos",
+      "texturePath": "Barbatos",
+      "excludedEffects": []
+    },
+    {
+      "id": "37",
+      "name": "smolbbsoopshaders by smolbbsoop",
+      "description": "A collection of personal shaders with various uses (RadialBlur, HDR to SDR)",
+      "downloadUrl": "https://github.com/smolbbsoop/smolbbsoopshaders/archive/refs/heads/main.zip",
+      "repositoryUrl": "https://github.com/smolbbsoop/smolbbsoopshaders",
+      "shaderPath": "smolbbsoop",
+      "texturePath": "smolbbsoop",
+      "excludedEffects": []
+    },
+    {
+      "id": "38",
+      "name": "BFBFX by yaboi BFB",
+      "description": "Multiple effects to augment older titles' graphics by adding effect like RTGI and SSAO. Names are still from the original, very stupidly named repo. Depends on Zenteon Framework!",
+      "downloadUrl": "https://github.com/yplebedev/BFBFX/archive/refs/heads/main.zip",
+      "repositoryUrl": "https://github.com/yplebedev/BFBFX",
+      "shaderPath": "BFBFX",
+      "texturePath": "",
+      "excludedEffects": []
+    },
+    {
+      "id": "39",
+      "name": "Rendepth by cybereality",
+      "description": "Stereoscopic 2D-to-3D Conversion",
+      "downloadUrl": "https://github.com/outmode/rendepth-reshade/archive/refs/heads/main.zip",
+      "repositoryUrl": "https://github.com/outmode/rendepth-reshade",
+      "shaderPath": "Rendepth",
+      "texturePath": "Rendepth",
+      "excludedEffects": []
+    },
+    {
+      "id": "40",
+      "name": "Retro Shaders by P0NYSLAYSTATION",
+      "description": "Crop, resize, upscale and dithering",
+      "downloadUrl": "https://github.com/P0NYSLAYSTATION/Scaling-Shaders/archive/refs/heads/main.zip",
+      "repositoryUrl": "https://github.com/P0NYSLAYSTATION/Scaling-Shaders",
+      "shaderPath": "Retro Shaders",
+      "texturePath": "Retro Shaders",
+      "excludedEffects": []
+    },
+    {
+      "id": "41",
+      "name": "LumeniteFX",
+      "description": "Lumenite ReShade Effects",
+      "downloadUrl": "https://github.com/umar-afzaal/LumeniteFX/archive/refs/heads/master.zip",
+      "repositoryUrl": "https://github.com/umar-afzaal/LumeniteFX",
+      "shaderPath": "LumeniteFX",
+      "texturePath": "LumeniteFX",
+      "excludedEffects": []
+    },
+    {
+      "id": "42",
+      "name": "Shades by JakobPCoder",
+      "description": "Currently only the TFAA.fx shader. Requires depth buffer and iMMERSE LAUNCHPAD.",
+      "downloadUrl": "https://github.com/JakobPCoder/Reshade-Shades/archive/refs/heads/main.zip",
+      "repositoryUrl": "https://github.com/JakobPCoder/Reshade-Shades",
+      "shaderPath": "Shades",
+      "texturePath": "Shades",
+      "excludedEffects": []
+    }
+  ]
+}

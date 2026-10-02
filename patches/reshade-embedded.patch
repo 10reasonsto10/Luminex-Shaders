@@ -1,0 +1,100 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 9b09044..33f067b 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,6 +1,8 @@
+ cmake_minimum_required(VERSION 3.23)
+ project(ReShade LANGUAGES C;CXX)
+ 
++option(RESHADE_EMBEDDED_LIBRARY "Build a runtime-only library without proxy hooks" OFF)
++
+ set(CMAKE_CXX_STANDARD 17)
+ set(CMAKE_CONFIGURATION_TYPES Debug;Release)
+ set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+@@ -38,6 +40,7 @@ set(RESHADE_SOURCE
+   source/dll_log.cpp
+   source/dll_log.hpp
+   source/dll_main.cpp
++  source/dll_main_embedded.cpp
+   source/dll_resources.cpp
+   source/dll_resources.hpp
+   source/hook.cpp
+@@ -304,6 +307,7 @@ target_compile_definitions(
+     RESHADE_GUI
+     RESHADE_API_LIBRARY_EXPORT
+     RESHADE_ADDON=2
++    $<$<BOOL:${RESHADE_EMBEDDED_LIBRARY}>:RESHADE_TEST_APPLICATION;RESHADE_EMBEDDED_LIBRARY>
+     $<$<CXX_COMPILER_ID:MSVC>:RESHADE_LOCALIZATION>
+     $<$<CONFIG:Debug>:RESHADE_VERBOSE_LOG>
+     _GDI32_
+@@ -314,6 +318,10 @@ target_compile_definitions(
+     $<$<CONFIG:Release>:NDEBUG>
+ )
+ 
++if(RESHADE_EMBEDDED_LIBRARY)
++  set_target_properties(ReShade PROPERTIES OUTPUT_NAME "LuminexReShadeRuntime" SUFFIX "${CMAKE_SHARED_LIBRARY_SUFFIX}")
++endif()
++
+ if(MSVC)
+   target_compile_options(
+     ReShade
+diff --git a/source/runtime.cpp b/source/runtime.cpp
+index 9ad4b62..ab8e17c 100644
+--- a/source/runtime.cpp
++++ b/source/runtime.cpp
+@@ -368,7 +368,7 @@ reshade::runtime::~runtime()
+ #endif
+ }
+ 
+-bool reshade::runtime::on_init()
++bool reshade::runtime::on_init(bool suppress_reload_splash)
+ {
+ 	assert(!_is_initialized);
+ 
+@@ -565,6 +565,7 @@ bool reshade::runtime::on_init()
+ 
+ 	// Reset frame count to zero so effects are loaded in 'update_effects'
+ 	_frame_count = 0;
++	_suppress_next_reload_splash = suppress_reload_splash;
+ 
+ 	_is_initialized = true;
+ 	_last_reload_time = std::chrono::high_resolution_clock::now(); // Intentionally set to current time, so that duration to last reload is valid even when there is no reload on init
+@@ -3482,7 +3483,8 @@ void reshade::runtime::reload_effects(bool force_load_all)
+ 
+ #if RESHADE_GUI
+ 	_preset_is_modified = false;
+-	_show_splash = true; // Always show splash bar when reloading everything
++	_show_splash = !_suppress_next_reload_splash;
++	_suppress_next_reload_splash = false;
+ 	_reload_count++;
+ #endif
+ 	_last_reload_successful = true;
+diff --git a/source/runtime.hpp b/source/runtime.hpp
+index 5c204b2..40eefdd 100644
+--- a/source/runtime.hpp
++++ b/source/runtime.hpp
+@@ -32,7 +32,7 @@ namespace reshade
+ 		runtime(api::swapchain *swapchain, api::command_queue *graphics_queue, const std::filesystem::path &config_path, bool is_vr);
+ 		~runtime();
+ 
+-		bool on_init();
++		bool on_init(bool suppress_reload_splash = false);
+ 		void on_reset();
+ 		void on_present();
+ 
+@@ -165,6 +165,7 @@ namespace reshade
+ 		void reorder_techniques(size_t count, const api::effect_technique *techniques) final;
+ 
+ 		bool open_overlay(bool open, api::input_source source) final;
++		bool is_overlay_open_for_luminex() const { return _show_overlay; }
+ 
+ 		void set_color_space(api::color_space color_space) final;
+ 
+@@ -420,6 +421,7 @@ namespace reshade
+ 		ImGuiContext *_imgui_context = nullptr;
+ 
+ 		bool _show_splash = true;
++		bool _suppress_next_reload_splash = false;
+ 		bool _show_overlay = false;
+ 		unsigned int _show_fps = 2;
+ 		unsigned int _show_clock = false;

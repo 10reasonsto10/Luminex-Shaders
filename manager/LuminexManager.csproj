@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>LuminexManager</AssemblyName>
+    <RootNamespace>LuminexManager</RootNamespace>
+    <Version>0.1.0-alpha.4</Version>
+    <Authors>Luminex Shaders</Authors>
+    <Product>Luminex Shaders Manager</Product>
+    <ApplicationIcon>Assets\Luminex.ico</ApplicationIcon>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="LuminexUiTests" />
+    <EmbeddedResource Include="Assets\LuminexMark.png" LogicalName="LuminexMark.png" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(LuminexPackage)' != ''">
+    <EmbeddedResource Include="$(LuminexPackage)" LogicalName="Luminex.Package.zip" />
+  </ItemGroup>
+</Project>
